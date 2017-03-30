@@ -1,23 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Contacts</h1>
+<h1><%= t("activerecord.models.contact") %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Cellphone</th>
-      <th>Email</th>
+      <th><%= t("activerecord.attributes.contact.name") %></th>
+      <th><%= t("activerecord.attributes.contact.birthdate") %></th>
+      <th><%= t("activerecord.attributes.contact.address") %></th>
+      <th><%= t("activerecord.attributes.contact.email") %></th>
+      <th><%= t("activerecord.attributes.contact.cellphone") %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
-   
+
   <tbody>
     <% @contacts.each do |contact| %>
       <tr>
         <td><%= contact.name %></td>
-        <td><%= contact.cellphone %></td>
+        <td><%= contact.birthdate %></td>
+        <td><%= contact.address %></td>
         <td><%= contact.email %></td>
+        <td><%= contact.cellphone %></td>
         <td><%= link_to 'Show', contact %></td>
         <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
         <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -25,7 +29,10 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
+
+<div>
+  <%= paginate @contacts %>
+</div>
 
 <%= link_to 'New Contact', new_contact_path %>

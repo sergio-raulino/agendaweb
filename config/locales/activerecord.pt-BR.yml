@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    models:
+      contact: "Contato"
+    attributes:
+      contact:
+        name: "Nome"
+        birthdate: "Data de Nasc."
+        address: "Endereço"
+        email: "Email de Contato"
+        cellphone: "Telefone para Contato"
