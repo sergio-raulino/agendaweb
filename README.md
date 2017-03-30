@@ -1,24 +1,7 @@
-# README
+# Imersão Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+App Desenvolvida para por em prática os conhecimentos adquiridos no curso de Imersão Ruby on Rails 2017 ministrado 
+pela Vice Governadoria.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Kanban no trello com as issues que foram desenvolvidas/em desenvolvimento.
+https://trello.com/b/hagTVfYk/agendaweb
