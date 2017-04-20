@@ -1,17 +1,26 @@
 <p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Name:</strong>
+  <strong><%= t("activerecord.attributes.contact.name") %>:</strong>
   <%= @contact.name %>
 </p>
 
 <p>
-  <strong>Email:</strong>
+  <strong><%= t("activerecord.attributes.contact.birthdate") %>:</strong>
+  <%= @contact.birthdate %>
+</p>
+
+<p>
+  <strong><%= t("activerecord.attributes.contact.address") %>:</strong>
+  <%= @contact.address %>
+</p>
+
+<p>
+  <strong><%= t("activerecord.attributes.contact.email") %>:</strong>
   <%= @contact.email %>
 </p>
 
 <p>
-  <strong>Cellphone:</strong>
+  <strong><%= t("activerecord.attributes.contact.cellphone") %>:</strong>
   <%= @contact.cellphone %>
 </p>
 

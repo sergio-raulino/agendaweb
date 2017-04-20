@@ -12,5 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require jquery-maskedinput/src/jquery.maskedinput
 //= require_tree .
