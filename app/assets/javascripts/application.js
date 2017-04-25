@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-maskedinput/src/jquery.maskedinput
+//= require twitter/bootstrap
+//= require turbolinks
 //= require_tree .
