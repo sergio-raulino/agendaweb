@@ -1,6 +1,26 @@
 require 'rails_helper'
 
 RSpec.describe Contact, type: :model do
+
+  it "Should have a factory" do
+    expect(FactoryGirl.build(:contact)).to be_valid
+  end
+
+  context "Should raise an error without name" do
+    it "with name" do
+      contact = FactoryGirl.build(:contact)
+      contact.name = nil
+      expect(contact.valid?).to be_falsey
+    end
+
+    it "return message: não pode ficar em branco" do
+      contact = FactoryGirl.build(:contact)
+      contact.name = nil
+      contact.save
+      expect(contact.errors.messages[:name]).to include("não pode ficar em branco")
+    end
+  end
+
    context "Should Respond" do
     it { should respond_to(:name) }
     it { should respond_to(:email) }
