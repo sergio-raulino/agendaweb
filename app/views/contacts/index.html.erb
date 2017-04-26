@@ -2,7 +2,9 @@
 
 <h1><%= t("activerecord.models.contact") %></h1>
 
-<table>
+<%= link_to t("app.new", name: t("activerecord.models.contact")), new_contact_path, class: "btn btn-success" %>
+
+<table class="table">
   <thead>
     <tr>
       <th><%= t("activerecord.attributes.contact.name") %></th>
@@ -22,9 +24,9 @@
         <td><%= contact.address %></td>
         <td><%= contact.email %></td>
         <td><%= contact.cellphone %></td>
-        <td><%= link_to 'Show', contact %></td>
-        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('app.show'), contact, class: "btn btn-primary" %></td>
+        <td><%= link_to t('app.edit'), edit_contact_path(contact), class: "btn btn-primary" %></td>
+        <td><%= link_to t('app.destroy'), contact, class: "btn btn-danger",method: :delete, data: { confirm: t('app.messages.are_you_sure') } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,5 +36,3 @@
 <div>
   <%= paginate @contacts %>
 </div>
-
-<%= link_to 'New Contact', new_contact_path %>

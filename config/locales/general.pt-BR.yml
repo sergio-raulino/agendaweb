@@ -1,0 +1,9 @@
+pt-BR:
+  app:
+    new: "Novo %{name}"
+    edit: "Editar"
+    show: "Visualizar"
+    destroy: "Apagar"
+    messages:
+      are_you_sure: "Deseja realmente apagar?"
+

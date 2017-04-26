@@ -29,6 +29,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem "bower-rails", "~> 0.11.0"
 gem 'kaminari'
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem 'twitter-bootstrap-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
