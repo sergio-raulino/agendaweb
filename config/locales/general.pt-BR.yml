@@ -1,9 +1,12 @@
 pt-BR:
   app:
+    appname: "AgendaWEB"
     new: "Novo %{name}"
     edit: "Editar"
     show: "Visualizar"
     destroy: "Apagar"
+    menu: "Menu"
+    logout: "Sair"
     messages:
       are_you_sure: "Deseja realmente apagar?"
 
