@@ -9,4 +9,6 @@ pt-BR:
     logout: "Sair"
     messages:
       are_you_sure: "Deseja realmente apagar?"
+    access_errors:
+      not_allowed: "Você não possui previlégios para essa ação. Contate o Administrador da app para mais detalhes."
 
