@@ -1,7 +1,14 @@
 pt-BR:
+  enums:
+    user:
+      role_id:
+        admin: "Administrador"
+        user: "Usuário"
+        dumb: "Bocó"
   activerecord:
     models:
       contact: "Contato"
+      user: "Usuário"
     attributes:
       contact:
         name: "Nome"
@@ -9,3 +16,8 @@ pt-BR:
         address: "Endereço"
         email: "Email de Contato"
         cellphone: "Telefone para Contato"
+      user:
+        name: "Nome"
+        email: "Email"
+        password: "Senha"
+        role_id: "Perfil"

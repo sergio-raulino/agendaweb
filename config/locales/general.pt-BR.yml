@@ -4,5 +4,7 @@ pt-BR:
     edit: "Editar"
     show: "Visualizar"
     destroy: "Apagar"
+    menu: "Menu"
+    logout: "Logout"
     messages:
       are_you_sure: "Deseja realmente apagar?"
