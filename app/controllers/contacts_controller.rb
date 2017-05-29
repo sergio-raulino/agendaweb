@@ -10,21 +10,25 @@ class ContactsController < ApplicationController
   # GET /contacts/1
   # GET /contacts/1.json
   def show
+    authorize @contact
   end
 
   # GET /contacts/new
   def new
     @contact = Contact.new
+    authorize @contact
   end
 
   # GET /contacts/1/edit
   def edit
+    authorize @contact
   end
 
   # POST /contacts
   # POST /contacts.json
   def create
-    @contact = Contact.new(contact_params)
+    @contact = Contact.new(contact_params.merge({ user_id: current_user.id}))
+    authorize @contact
 
     respond_to do |format|
       if @contact.save
@@ -41,6 +45,7 @@ class ContactsController < ApplicationController
   # PATCH/PUT /contacts/1.json
   def update
     respond_to do |format|
+      authorize @contact
       if @contact.update(contact_params)
         format.html { redirect_to @contact, notice: 'Contact was successfully updated.' }
         format.json { render :show, status: :ok, location: @contact }
@@ -54,6 +59,7 @@ class ContactsController < ApplicationController
   # DELETE /contacts/1
   # DELETE /contacts/1.json
   def destroy
+    authorize @contact
     @contact.destroy
     respond_to do |format|
       format.html { redirect_to contacts_url, notice: 'Contact was successfully destroyed.' }
@@ -69,6 +75,12 @@ class ContactsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contact_params
-      params.require(:contact).permit(:name, :email, :cellphone, :address, :birthdate)
+      params.require(:contact).permit(
+        :avatar,
+        :name,
+        :email,
+        :cellphone,
+        :address,
+        :birthdate)
     end
 end

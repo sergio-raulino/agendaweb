@@ -35,6 +35,12 @@ gem 'twitter-bootstrap-rails'
 gem 'devise'
 gem 'devise-i18n'
 gem 'sprockets', '3.6.3'
+gem 'enum_help'
+gem "pundit"
+gem "pry-rails"
+gem "rails-erd"
+gem 'font-awesome-rails'
+gem 'carrierwave'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

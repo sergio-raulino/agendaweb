@@ -5,6 +5,10 @@ RSpec.describe Contact, type: :model do
     expect(FactoryGirl.build(:contact)).to be_valid
   end
 
+  context "Associations" do
+    it { should belong_to(:user) }
+  end
+
   context "Should raise an error without name" do
     it "with name" do
       contact = FactoryGirl.build(:contact)
@@ -19,7 +23,7 @@ RSpec.describe Contact, type: :model do
       expect(contact.errors.messages[:name]).to include("não pode ficar em branco")
     end
   end
-  
+
   context "Should Respond" do
     it { should respond_to(:name) }
     it { should respond_to(:email) }
