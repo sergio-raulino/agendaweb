@@ -1,5 +1,22 @@
 <p id="notice"><%= notice %></p>
 
+<%= search_form_for @q do |f| %>
+  <div class="row">
+    <div class="col-md-10">
+      <%= f.search_field :name_cont, class: "form-control", placeholder: t('views.contacts.search_placeholder') %>
+    </div>
+
+    <div class="col-md-2">
+      <%= button_tag type: "submit", class: "btn btn-success" do %>
+        <%= fa_icon("search") %>
+      <% end %>
+      <%= link_to contacts_path, class: "btn btn-danger" do %>
+        <%= fa_icon("close") %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
 <h1><%= t("activerecord.models.contact") %></h1>
 
 <%= link_to t("app.new", name: t("activerecord.models.contact")), new_contact_path, class: "btn btn-success" %>

@@ -1,0 +1,5 @@
+pt-BR:
+  views:
+    contacts:
+      search_placeholder: 'Pesquisar por Nome, email e/ou telefone'
+

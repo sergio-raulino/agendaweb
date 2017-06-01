@@ -41,6 +41,9 @@ gem "pry-rails"
 gem "rails-erd"
 gem 'font-awesome-rails'
 gem 'carrierwave'
+gem 'paper_trail'
+gem 'rails_admin', '~> 1.2'
+gem 'ransack'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
