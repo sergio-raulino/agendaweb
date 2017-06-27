@@ -1,4 +1,5 @@
 class Contact < ApplicationRecord
+  has_paper_trail
   mount_uploader :avatar, AvatarUploader
 
   validates :name, presence: true
